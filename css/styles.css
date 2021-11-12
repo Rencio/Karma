@@ -7399,11 +7399,13 @@ textarea.form-control-lg {
 }
 
 .bg-primary {
-  background-color: #1abc9c !important;
+ /* background-color: #1abc9c !important;*/
+  background-image: url(../assets/img/hero1.jpg);
+  
 }
 
 .bg-secondary {
-  background-color: #2c3e50 !important;
+  background-color: #2c3e50;
 }
 
 .bg-success {
@@ -10910,8 +10912,8 @@ html {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
 }
@@ -10989,16 +10991,48 @@ html {
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
+  
 }
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
+
+  animation-name: moveInLeft;
+ animation-duration: 2s;
 }
 .masthead .masthead-subheading {
   font-size: 1.25rem;
+  animation-name: moveInRight;
+ animation-duration: 2s;
+}
+@keyframes moveInLeft{
+0%{
+  opacity: 0;
+  transform: translate(-100px);
+}
+80%{
+  transform: translate(20px);
+}
+100%{
+  opacity: 1;
+  transform: translate(0px);
+}
+}
+@keyframes moveInRight{
+  0%{
+    opacity: 0;
+    transform: translate(100px);
+  }
+  80%{
+    transform: translate(-20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0px);
+  }
 }
 .masthead .masthead-avatar {
-  width: 15rem;
+  width: 20rem;
 }
 
 @media (min-width: 992px) {
@@ -11061,5 +11095,73 @@ html {
 }
 
 .copyright {
+  border-color: turquoise;
+  margin-bottom: 0ex;
   background-color: #1a252f;
+}
+.copyright .container{
+height: auto;
+width: auto;
+}
+.cirbar{
+  height: auto;
+  width: auto;
+position: relative;
+cursor: pointer;
+transition: 0.20;
+}
+.cirbar .menu{
+  list-style: none;
+  padding: 10%;
+  margin: 10%;
+  position:absolute;
+  top: -75px;
+  left: -75px;
+  border: 150px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 1.4s 0.07s;
+}
+.cirbar:hover .menu{
+  transition: transform 0.4s 0.08s,z-index 0s 0.5s;
+  transform: scale(1.8);
+  z-index: 2;
+}
+.cirbar .menu li{
+  position: relative;
+  top: -100px;
+  left: -100px;
+  transform-origin: 120px 120px;
+  transition: all 0.5s 0.1s;
+}
+.cirbar:hover .menu li{
+  width: 45px;
+  height:45px;
+  line-height: 45px;
+  border-radius: 50%;
+ /* background: white;*/
+  position: absolute;
+  font-size: 59%;
+  transition: 0.7s;
+}
+.cirbar:hover .menu li:nth-child(1){
+  transition-delay: 0.02s;
+  transform:rotate(72deg);
+}
+.cirbar:hover .menu li:nth-child(2){
+  transition-delay: 0.04s;
+  transform:rotate(144deg);
+}
+.cirbar:hover .menu li:nth-child(3){
+  transition-delay: 0.06s;
+  transform:rotate(216deg);
+}
+.cirbar:hover .menu li:nth-child(4){
+  transition-delay: 0.08s;
+  transform:rotate(288deg);
+}
+.cirbar:hover .menu li:nth-child(5){
+  transition-delay: 0.10s;
+  transform:rotate(360deg);
 }
