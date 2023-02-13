@@ -18,6 +18,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script type="text/javascript" src="script.js"></script>
     </head>
     <body id="page-top">
         <!-- Masthead-->
@@ -34,13 +35,52 @@
                     <li><a href=" "  class="fa-phone" aria-hidden="true">Contact_me</a></li>
                 </ul>-->
                 <ul class="menu">
-                     <li><i class="glyphicon glyphicon-user"></i><a href="#" class="menu-item">About_me</a></li>
-                     <li><i class="glyphicon glyphicon-envelope"></i><a href="#" class="menu-item">Portfolio</a></li>
-                     <li><i class="fa fa-phone"></i><a href="#" class="menu-item">Services</a></li>
-                     <li><i class="glyphicon glyphicon-envelope"></i><a href="#" class="menu-item">Gallery</a></li>
-                     <li><i class="fa fa-phone"></i><a href="#" class="menu-item">Contact_me</a></li>
-                  </ul>
+                  <li><a href="#" class="glyphicon glyphicon-user" onclick="showPopUp('about-me-popup')">About Me</a></li>
+                  <li><a href="#" class="glyphicon glyphicon-envelope" onclick="showPopUp('portfolio-popup')">Portfolio</a></li>
+                  <li><a href="#" class="fa-phone" onclick="showPopUp('services-popup')">Services</a></li>
+                  <li><a href="#" class="glyphicon glyphicon-envelope" onclick="showPopUp('gallery-popup')">Gallery</a></li>
+                  <li><a href="#" class="fa-phone" onclick="showPopUp('contact-me-popup')">Contact Me</a></li>
+                </ul>
+                 <div id="about-me-popup" class="popup">
+                    <div class="popup-content">
+                    <span class="close-btn" onclick="hidePopUp('about-me-popup')">&times;</span>
+                    <h2>About Me</h2>
+                    <p>Here you can put information about yourself</p>
+                  </div>
+                </div>
 
+                <div id="portfolio-popup" class="popup">
+                  <div class="popup-content">
+                    <span class="close-btn" onclick="hidePopUp('portfolio-popup')">&times;</span>
+                    <h2>Portfolio</h2>
+                    <p>Here you can put information about your portfolio</p>
+                  </div>
+                </div>
+
+                <div id="services-popup" class="popup">
+                  <div class="popup-content">
+                    <span class="close-btn" onclick="hidePopUp('services-popup')">&times;</span>
+                    <h2>Services</h2>
+                    <p>Here you can put information about the services you offer</p>
+                  </div>
+                </div>
+
+                <div id="gallery-popup" class="popup">
+                  <div class="popup-content">
+                    <span class="close-btn" onclick="hidePopUp('gallery-popup')">&times;</span>
+                    <h2>Gallery</h2>
+                    <p>Here you can put information about your gallery</p>
+                  </div>
+                </div>
+
+                 <div id="contact-me-popup" class="popup">
+                  <div class="popup-content">
+                    <span class="close-btn" onclick="hidePopUp('contact-me-popup')">&times;</span>
+                    <h2>Contact Me</h2>
+                    <p>Here you can put information about your Contact me at 000-0000000</p>
+                  </div>
+                </div>
+                    
                 </div>
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Karma Gurung</h1>
