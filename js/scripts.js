@@ -53,6 +53,18 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 //Popup Screen for menus
+/*var popupButton = document.getElementById("popup-button");
+var popup = document.getElementById("popup");
+var closeButton = document.querySelector(".close-button");
+
+popupButton.addEventListener("click", function() {
+  popup.classList.remove("hidden");
+});
+
+closeButton.addEventListener("click", function() {
+  popup.classList.add("hidden");
+});
+*/
 var popupButton = document.getElementById("popup-button");
 var popup = document.getElementById("popup");
 var closeButton = document.querySelector(".close-button");
@@ -64,3 +76,7 @@ popupButton.addEventListener("click", function() {
 closeButton.addEventListener("click", function() {
   popup.classList.add("hidden");
 });
+
+while (!popup.classList.contains("hidden")) {
+  // do nothing
+}
